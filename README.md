@@ -1,38 +1,42 @@
-# credit-risk-classification\Overview of the loan prediction risk analysis:
-Credit risk is an inherently unbalanced classification problem, as good loans easily outnumber risky loans. Various libraries and algorithms were used to build and evaluate models using resampling including:
+### Instructions
+The instructions for this Challenge are divided into the following subsections:
 
-imbalanced-learn RandomOverSampler
-scikit-learn Logistic Regression Model
-Purpose:
-Explaination on machine learning algorithm use in data analytics.
-Create training, test groups, and split from a given data set.
-Implement the logistic regression machine learning algorithms to determine the performance of resampling of the dataset.
-Compare the advantages and disadvantages of each supervised learning algorithm.
-Determine with method is the best supervised learning algorithm for the given scenario.
-Results:
-The results for the machine learning models including their respective balanced accuracy, precision, and recall scores are as follows:
+Split the Data into Training and Testing Sets
 
-Naive Data
+Create a Logistic Regression Model with the Original Data
 
+Write a Credit Risk Analysis Report
 
-Counter: Low Risk 75,036 / High Risk 2,500
-Logistic Regression (Random State = 1)
-Balanced Accuracy: 0.9918489475856377
-Precision: The precision is high for High-risk loans and recall is very high for Low-risk loans.
-Recall: Recision/Recall risk = .85/.91
-Random Oversampling
+# Split the Data into Training and Testing Sets
+Open the starter code notebook and use it to complete the following steps:
+
+Read the lending_data.csv data from the Resources folder into a Pandas DataFrame.
+
+Create the labels set (y) from the “loan_status” column, and then create the features (X) DataFrame from the remaining columns.
 
 
-Counter: Low Risk 75,036 / High Risk 2,500
-Logistic Regression (Random State = 1)
-Balanced Accuracy:0.9952011514473053
-Precision: The precision is high for High-risk loans and recall improved to near perfect for Low-risk loans.
-Recall: High/Low risk = .87/1.00
-Summary:
-When working with balanced accuracy, the highest compared accuracy between 0 and 1 and is closest to 1 is the best machine learning model.
+# Create a Logistic Regression Model with the Original Data
+Use your knowledge of logistic regression to complete the following steps:
 
-Credit Card Data Set
-For the credit card data set, the Random oversampling model is the best model to choose with its reduced false positive rate.
-The other models were below .80 balanced accuracy.
-The precision for all models were similar and within an appropriate range. The recall score also needs to fall within 0 and 1, with numbers closer to 1 being the better model.
-The Easy Ensemble AdaBoost Classifier had the highest recall score, making it the final best machine learning model to choose for further credit card analysis.
+Fit a logistic regression model by using the training data (X_train and y_train).
+
+Save the predictions for the testing data labels by using the testing feature data (X_test) and the fitted model.
+
+Evaluate the model’s performance by doing the following:
+
+Generate a confusion matrix.
+
+Print the classification report.
+
+Answer the following question: How well does the logistic regression model predict both the 0 (healthy loan) and 1 (high-risk loan) labels?
+
+# Write a Credit Risk Analysis Report
+Write a brief report that includes a summary and analysis of the performance of the machine learning models that you used in this homework. You should write this report as the README.md file included in your GitHub repository.
+
+Structure your report by using the report template that Starter_Code.zip includes, ensuring that it contains the following:
+
+An overview of the analysis: Explain the purpose of this analysis.
+
+The results: Using a bulleted list, describe the accuracy score, the precision score, and recall score of the machine learning model.
+
+A summary: Summarise the results from the machine learning model. Include your justification for recommending the model for use by the company. If you don’t recommend the model, justify your reasoning.
